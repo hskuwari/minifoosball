@@ -1,4 +1,11 @@
-The joystick is run by joy_x_y.ino (using energia). For each joystick, I change thee definition of PLAYER to either 0 or 1. 
+# Remote-controlled Foosball 
+This is a project made for 15-348 Embedded Systems. We used a mini foosball; with only 2 rods per each player. Each rod is controlled by a rotational servo-motor (can only move rotationally, not linearly). Scores are added manually by pressing a button, and the scores show by the number of LED that are turned on. The player can control each rod by moving the joystick horizontally and they can also choose which rod to move by choosing button A (for the  offense) and button B (for the defense). 
+
+### Hardware used
+For the microcontroller, we used Tiva™ TM4C123GH6PM Microcontroller. We used 4 microcontrollers in total: 2 per each player (1 that is connected with the servomotors and 1 that connected with the joystick). For the joystick, we used Educational BoosterPack MKII. We also used 2 IR recievers and 2 IR LED transmitters for IR communication between 2 microcontrollers. We used 24 LEDs in totol, 12 per each side. Each side uses 10 LEDs to display results, and 2 LEDs to know which rod is being controlled at the moment.  
+
+### Implementation
+The joystick is run by joy_x_y.ino (using energia). For each joystick, I change the definition of PLAYER to either 0 or 1. 
 
 board_side.c also has PLAYER and it is set accordingly. (PLAYER with yellow uniform is 1 and the other one is 0).
 
